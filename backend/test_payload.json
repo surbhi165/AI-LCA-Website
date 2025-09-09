@@ -1,0 +1,11 @@
+{
+  "energy_use": 100,
+  "recycled_content": 40,
+  "material_type": "plastic",
+  "route": "recycled",
+  "energy_source": "solar",
+  "transport_mode": "rail",
+  "end_of_life": "recycle",
+  "quantity": 200,
+  "distance": 50
+}

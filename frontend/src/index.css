@@ -1,0 +1,408 @@
+/* Global background and font styles */
+body {
+  background: #f9fafb; /* light grey background for content area */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b; /* dark text for readability */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  text-align: justify;
+}
+
+/* Center align material type and all titles in InputForm */
+#materialType, label[for="materialType"],
+#route, label[for="route"],
+#energyUse, label[for="energyUse"],
+#energySource, label[for="energySource"],
+#distance, label[for="distance"],
+#recycledContent, label[for="recycledContent"],
+#endOfLife, label[for="endOfLife"],
+#quantity, label[for="quantity"],
+h1 {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  max-width: 300px; /* Limit width to avoid full screen */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #1e40af !important; /* Changed all text color from yellow to dark blue */
+}
+
+h2, h3, h4, h5, h6 {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  max-width: 300px; /* Limit width to avoid full screen */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #7c3aed; /* Make other headings colorful */
+}
+
+label {
+  color: #22d3ee; /* Make labels colorful */
+}
+
+/* Container backgrounds for main sections */
+.app-container {
+  background: #f9fafb; /* light grey background for content area */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #1e293b; /* dark text for readability */
+}
+
+/* Accent colors */
+.btn-primary {
+  background: linear-gradient(90deg, #22c55e, #16a34a); /* green gradient */
+  color: white;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+/* Navbar */
+nav {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Nav links (tabs) */
+nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: linear-gradient(135deg, #f9fafb, #e0e7ff);
+  color: #4b5563;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid #e5e7eb;
+}
+
+nav a:hover {
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  color: white;
+  box-shadow: 0 4px 8px rgba(124, 58, 237, 0.3);
+}
+
+nav a.active {
+  background: linear-gradient(90deg, #22d3ee, #7c3aed);
+  color: white;
+  box-shadow: 0 4px 8px rgba(34, 211, 238, 0.3);
+  border-color: #22d3ee;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: white;
+  border-right: 1px solid #e5e7eb;
+  min-height: 100vh;
+  width: 250px;
+  padding: 1rem;
+}
+
+/* Sidebar nav links */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #4b5563;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: linear-gradient(135deg, #f9fafb, #e0e7ff);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  color: white;
+  box-shadow: 0 4px 8px rgba(124, 58, 237, 0.3);
+}
+
+/* Form inputs */
+input, select, textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
+}
+
+/* Floating labels */
+.floating-label {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.floating-label input,
+.floating-label select,
+.floating-label textarea {
+  padding-top: 1.25rem;
+}
+
+.floating-label label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.75rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label select:focus + label,
+.floating-label select:not([value=""]) + label,
+.floating-label textarea:focus + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+  top: -0.75rem;
+  left: 0.5rem;
+  font-size: 0.75rem;
+  color: #7c3aed;
+  background: white;
+  padding: 0 0.25rem;
+  font-weight: 600;
+}
+
+/* Card styling */
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+header, nav, footer {
+  background: linear-gradient(90deg, #4c1d95, #7c3aed);
+  color: white;
+}
+
+main {
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  flex-grow: 1;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #a78bfa, #7c3aed);
+}
+
+/* Links */
+a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Overrides for center alignment */
+button, .btn-primary, nav a, .sidebar a, header, .app-container, input, select, textarea {
+  text-align: center;
+}
+
+/* Align label and select for transport mode above */
+#transportModeContainer {
+  display: block;
+  text-align: center;
+}
+
+#transportModeContainer label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#transportModeContainer select {
+  max-width: 120px;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* Specific for LCASetup page */
+.lca-setup-container {
+  text-align: center;
+}
+
+/* Dark blue for specific texts in Configure page */
+.lca-setup-container > h1,
+.lca-setup-container > p,
+.lca-setup-container > div > h2,
+.lca-setup-container > div.bg-yellow-100 p,
+.lca-setup-container .bg-white h2,
+.lca-setup-container .bg-white h3,
+.lca-setup-container .bg-white label,
+.lca-setup-container .bg-white button,
+.lca-setup-container .bg-white select,
+.lca-setup-container .bg-white input,
+.insights-tab .visualizations {
+  color: #1e40af !important;
+}
+
+.insights-tab .visualizations > h1 {
+  color: #1e40af !important;
+}
+
+.insights-tab .visualizations > h1 span {
+  color: #1e40af !important;
+}
+
+/* Additional rule to target the yellow text inside the Visualizations heading */
+.insights-tab .visualizations > h1 span.yellow-text {
+  color: #1e40af !important;
+}
+
+/* Force override for any nested elements with inline or other styles */
+.insights-tab .visualizations > h1, 
+.insights-tab .visualizations > h1 * {
+  color: #1e40af !important;
+}
+
+.insights-tab .visualizations h1, 
+.insights-tab .visualizations h2, 
+.insights-tab .visualizations h3, 
+.insights-tab .visualizations h4, 
+.insights-tab .visualizations h5, 
+.insights-tab .visualizations h6 {
+  color: #1e40af !important;
+}
+
+.lca-setup-container .bg-white select option {
+  color: darkblue; /* Changed to dark blue for select dropdown options */
+}
+
+.lca-setup-container .bg-white select option[value=""] {
+  color: darkblue; /* Changed to dark blue for placeholder select option text */
+}
+
+/* Specific overrides for InputForm labels and selects to be centered and grouped */
+#materialType, label[for="materialType"],
+#route, label[for="route"],
+#energyUse, label[for="energyUse"],
+#energySource, label[for="energySource"],
+#distance, label[for="distance"],
+#transportMode, label[for="transportMode"] {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+/* Make the border of the select dropdown for Material Type red */
+#materialType {
+  border-color: red !important;
+  color: darkblue !important;
+}
+
+#materialType option[value=""] {
+  color: darkblue !important;
+}
+
+/* Change the text color of the select dropdown for Route to dark blue */
+#route {
+  color: darkblue !important;
+}
+
+#route option[value=""] {
+  color: darkblue !important;
+}
+
+/* Change the text color of the select dropdown for Energy Source to dark blue */
+#energySource {
+  color: darkblue !important;
+}
+
+#energySource option[value=""] {
+  color: darkblue !important;
+}
+
+/* Change the text color of the select dropdown for Energy Use to dark blue */
+#energyUse {
+  color: darkblue !important;
+}
+
+#energyUse option[value=""] {
+  color: darkblue !important;
+}
+
+/* Change the text color of the select dropdown for Distance to dark blue */
+#distance {
+  color: darkblue !important;
+}
+
+#distance option[value=""] {
+  color: darkblue !important;
+}
+
+/* Change the text color of the select dropdown for Recycled Content to dark blue */
+#recycledContent {
+  color: darkblue !important;
+}
+
+#recycledContent option[value=""] {
+  color: darkblue !important;
+}
+
+/* Change the text color of the select dropdown for Quantity to dark blue */
+#quantity {
+  color: darkblue !important;
+}
+
+#quantity option[value=""] {
+  color: darkblue !important;
+}
+
+/* Change the text color of the select dropdown for End-of-Life to dark blue */
+#endOfLife {
+  color: darkblue !important;
+}
+
+#endOfLife option[value=""] {
+  color: darkblue !important;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1757230399366" clover="3.2.0">
+  <project timestamp="1757230399367" name="All files">
+    <metrics statements="35" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="14" coveredmethods="0" elements="53" coveredelements="0" complexity="0" loc="35" ncloc="35" packages="2" files="3" classes="3"/>
+    <package name="src">
+      <metrics statements="34" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="13" coveredmethods="0"/>
+      <file name="InputForm.jsx" path="C:\Users\Owner\Desktop\AI-LCA-website\frontend\src\InputForm.jsx">
+        <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+        <line num="140" count="0" type="stmt"/>
+        <line num="150" count="0" type="stmt"/>
+      </file>
+      <file name="Results.jsx" path="C:\Users\Owner\Desktop\AI-LCA-website\frontend\src\Results.jsx">
+        <metrics statements="12" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages">
+      <metrics statements="1" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="LCASetup.jsx" path="C:\Users\Owner\Desktop\AI-LCA-website\frontend\src\pages\LCASetup.jsx">
+        <metrics statements="1" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

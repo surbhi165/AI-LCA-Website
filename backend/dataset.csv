@@ -1,0 +1,11 @@
+Material Type,CO2 Emissions (kg CO2e),Circularity Score (/100),Energy Intensity (kWh/ton),Water Usage (L),SOx Emissions (kg),NOx Emissions (kg),Recycled Content (%),Resource Efficiency (%),Reuse/Recycling Potential (%)
+Steel,14.54,71,24124,12629,0.23,1.579,54,67,46
+Aluminium,7.15,50,7648,4809,0.896,0.333,17,48,38
+Copper,6.08,61,23461,12394,0.89,0.827,23,48,86
+Nickel,11.92,93,24728,13650,1.013,1.066,86,56,91
+Zinc,14.95,74,18543,14223,0.88,2.172,6,66,65
+Lead,9.62,80,5195,2838,0.659,0.664,56,70,41
+Titanium,19.65,92,3428,6613,0.881,1.233,49,84,44
+Magnesium,14.33,27,9028,1088,1.792,2.465,53,86,58
+Chromium,10.66,64,4252,10396,1.891,1.323,61,79,49
+Manganese,9.06,91,18766,4471,1.029,1.552,54,48,73
